@@ -1,0 +1,60 @@
+footer {
+	background: $text;
+	color: white;
+	padding: 4rem 2rem 2rem;
+
+	a {
+		color: rgba(255, 255, 255, 0.8);
+		text-decoration: none;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: $primary-light;
+			text-decoration: none;
+		}
+	}
+}
+
+.footer-content {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 3rem;
+	margin-bottom: 3rem;
+}
+
+.footer-column {
+	h4 {
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-size: 1.1rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		color: $accent-light;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			margin-bottom: 0.8rem;
+		}
+	}
+}
+
+.footer-bottom {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding-top: 2rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	text-align: center;
+	color: rgba(255, 255, 255, 0.6);
+
+	p {
+		margin: 0;
+		font-size: 0.9rem;
+		color: rgba(255, 255, 255, 0.6);
+	}
+}

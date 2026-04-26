@@ -1,0 +1,167 @@
+---
+title: "SnowflakeCompare — Snowflake Schema Diff & Deployment Tool"
+description: "Find every Snowflake schema difference in seconds. Generate deployment scripts automatically. Runs 100% locally — your data never leaves your machine."
+---
+
+<section class="hero">
+  <div class="text-container">
+    <p class="version-badge">Currently in development — sign up for early access</p>
+    <h1>The <span class="typewriter" data-words='["Reliable", "Fast", "Accurate", "Simple"]'></span>&nbsp;Way to<br>Compare Snowflake Schemas</h1>
+    <h2>Find schema differences, generate deployment SQL, and keep your Snowflake environments in sync — with confidence. Runs 100% locally.</h2>
+    <div class="hero-cta">
+      <a href="#signup" class="primary-button">
+        Get Early Access
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 3v14m0 0l6-6m-6 6l-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <a href="#features" class="secondary-button">See Features</a>
+    </div>
+    <div class="trust-bar">
+      <div class="trust-item">
+        <span class="trust-icon">✓</span>
+        <span><strong>100%</strong> Safe &amp; Secure</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">✓</span>
+        <span><strong>No</strong> Data Sent to Cloud</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-icon">✓</span>
+        <span><strong>Free</strong> Trial on Launch</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div class="section-header">
+    <h2>Everything You Need to Compare<br>Snowflake Schemas</h2>
+    <p>Powerful features designed to make Snowflake schema comparison fast, accurate, and reliable.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🔍</div>
+      <h3>Find Every Difference</h3>
+      <p>Compare Snowflake schema objects side-by-side — tables, views, sequences, stages, file formats, pipes, tasks, streams, and more. See exactly what changed with a human-readable summary alongside the SQL diff.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Generate Deployment Scripts</h3>
+      <p>Automatically generate dependency-ordered SQL scripts to synchronise any two Snowflake schemas. Scripts are ready to run directly in SnowSQL or the Snowflake web console.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛡️</div>
+      <h3>Runs 100% Locally</h3>
+      <p>All comparisons run on your machine. Your schema definitions never leave your network — no cloud-to-cloud processing, no data in transit to third parties.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⏱️</div>
+      <h3>Track Schema History</h3>
+      <p>Every comparison is saved automatically. See how your Snowflake schema evolved over time with a timeline view grouped by change category — catch drift before it reaches production.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📂</div>
+      <h3>Flexible Source Options</h3>
+      <p>Use a live Snowflake account or hand-written SQL scripts as either side of a comparison. Compare dev to test, test to prod, or validate a migration before you run it.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🚦</div>
+      <h3>Deploy with Confidence</h3>
+      <p>Destructive statements are highlighted before you run anything. A confirmation dialog shows the target account and risk count, so there are no surprises when deploying to production.</p>
+    </div>
+  </div>
+</section>
+
+<section class="signup-section" id="signup">
+  <div class="signup-container">
+    <h2>Be First to Know</h2>
+    <p>SnowflakeCompare is in active development. Sign up to get notified the moment it launches — and lock in an early adopter discount.</p>
+    <div class="ml-embedded" data-form="2Gqflv"></div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Built for Snowflake Engineers<br>and Data Teams</h2>
+    <p>Stop manually diffing schemas across environments. Get a reliable, local tool that shows you exactly what changed and generates the SQL to fix it.</p>
+    <a href="#signup" class="primary-button" style="background: white; color: #3B8FBF;">Sign Up for Early Access</a>
+  </div>
+</section>
+
+<style>
+.typewriter::after {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  background: #3B8FBF;
+  margin-left: 4px;
+  vertical-align: middle;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var element = document.querySelector('.typewriter');
+  if (!element) return;
+
+  var words = JSON.parse(element.dataset.words);
+  var wordIndex = 0;
+  var charIndex = 0;
+  var isDeleting = false;
+  var isPaused = false;
+
+  var typeSpeed = 80;
+  var deleteSpeed = 120;
+  var pauseAfterWord = 4000;
+  var pauseAfterDelete = 500;
+
+  function type() {
+    var currentWord = words[wordIndex];
+    if (isPaused) {
+      isPaused = false;
+      setTimeout(type, isDeleting ? pauseAfterWord : pauseAfterDelete);
+      return;
+    }
+    if (isDeleting) {
+      element.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        isPaused = true;
+      }
+    } else {
+      element.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === currentWord.length) {
+        isDeleting = true;
+        isPaused = true;
+      }
+    }
+    setTimeout(type, isDeleting ? deleteSpeed : typeSpeed);
+  }
+
+  element.textContent = words[0];
+  charIndex = words[0].length;
+  isDeleting = true;
+  isPaused = false;
+  setTimeout(type, pauseAfterWord);
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+  anchor.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>

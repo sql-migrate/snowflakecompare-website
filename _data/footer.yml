@@ -1,0 +1,19 @@
+- title: Product
+  links:
+  - name: Features
+    link: /#features
+  - name: Get Early Access
+    link: /#signup
+  - name: Contact
+    link: /contact
+- title: Sibling Tools
+  links:
+  - name: PostgresCompare
+    link: https://www.postgrescompare.com
+    new_window: true
+  - name: MySQLCompare
+    link: https://www.mysqlcompare.app
+    new_window: true
+  - name: SchemaDrift for Oracle
+    link: https://www.schemadriftfororacle.com
+    new_window: true

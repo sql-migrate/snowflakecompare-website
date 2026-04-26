@@ -1,0 +1,24 @@
+<a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
+<ul class="nav-links">
+	{% for link in site.data.navigation %}
+		{% assign class = "" %}
+		{% if link.highlight %}
+			{% assign class = "cta-button" %}
+		{% endif %}
+
+		{% assign is_active = false %}
+		{% if link.link == page.url %}
+			{% assign is_active = true %}
+		{% elsif link.link != "/" and link.link != "/#features" and link.link != "/#signup" %}
+			{% assign link_path = link.link | remove: "/" %}
+			{% if page.url contains link_path %}
+				{% assign is_active = true %}
+			{% endif %}
+		{% endif %}
+
+		{% if is_active %}
+			{% assign class = class | append: " active" %}
+		{% endif %}
+		<li><a href="{{ link.link }}" class="{{ class }}" {% if link.new_window %}target="_blank"{% endif %}>{{ link.name }}</a></li>
+	{% endfor %}
+</ul>

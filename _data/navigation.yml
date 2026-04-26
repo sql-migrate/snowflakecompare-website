@@ -1,0 +1,12 @@
+- name: Features
+  link: /#features
+  new_window: false
+  highlight: false
+- name: Contact
+  link: /contact
+  new_window: false
+  highlight: false
+- name: Get Early Access
+  link: /#signup
+  new_window: false
+  highlight: true

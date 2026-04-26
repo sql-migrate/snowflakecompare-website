@@ -1,0 +1,101 @@
+html {
+	background: $background;
+	overflow-x: hidden;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+	color: $text;
+	background: $background;
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+a {
+	color: $primary;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: $primary-dark;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1 strong, h2 strong {
+	font-weight: 700;
+}
+
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 2.5rem;
+	margin: 0;
+	color: $text;
+}
+
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 2rem;
+	margin: 0 0 30px 0;
+	color: $text;
+}
+
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	margin: 20px 0 10px 0;
+	color: $text;
+}
+
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	color: $text;
+}
+
+p, address {
+	font-size: 1.1rem;
+	color: $text-light;
+	margin-bottom: 20px;
+	font-weight: 400;
+	line-height: 1.8;
+}
+
+ul, ol {
+	color: $text-light;
+	line-height: 1.8;
+}
+
+hr {
+	border: none;
+	border-top: 1px solid $border;
+	margin: 2rem 0;
+}
+
+::selection {
+	background: rgba(59, 143, 191, 0.15);
+	color: $text;
+}
+
+:focus-visible {
+	outline: 2px solid $primary-light;
+	outline-offset: 2px;
+}

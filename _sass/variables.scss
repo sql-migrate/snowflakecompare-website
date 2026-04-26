@@ -1,0 +1,23 @@
+// Powder blue palette
+$primary: #3B8FBF;
+$primary-light: #5AAAD9;
+$primary-dark: #2A6F96;
+$accent: #F59E0B;
+$accent-light: #FCD34D;
+$text: #1F2937;
+$text-light: #6B7280;
+$background: #FAFAFA;
+$surface: #FFFFFF;
+$border: #E5E7EB;
+$success: #10B981;
+$shadow: rgba(59, 143, 191, 0.15);
+
+// Aliases for compatibility
+$brand-color: $primary;
+$secondary-brand-color: $primary-light;
+$middle-gradient-color: mix($brand-color, $secondary-brand-color, 95%);
+
+// Breakpoints
+$tablet: "(min-width: 450px)";
+$mid-point: "(min-width: 620px)";
+$desktop: "(min-width: 768px)";

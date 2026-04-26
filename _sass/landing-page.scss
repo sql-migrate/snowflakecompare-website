@@ -1,0 +1,223 @@
+// Hero Section
+.hero {
+	padding: 10rem 2rem 6rem;
+	max-width: 1280px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	animation: fadeInUp 0.8s ease-out 0.2s both;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -200px;
+		right: -100px;
+		width: 600px;
+		height: 600px;
+		background: radial-gradient(circle, rgba(59, 143, 191, 0.08) 0%, transparent 70%);
+		border-radius: 50%;
+		z-index: -1;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -100px;
+		left: -100px;
+		width: 500px;
+		height: 500px;
+		background: radial-gradient(circle, rgba(90, 170, 217, 0.06) 0%, transparent 70%);
+		border-radius: 50%;
+		z-index: -1;
+	}
+
+	h1 {
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-size: 3.5rem;
+		font-weight: 800;
+		line-height: 1.2;
+		margin-bottom: 1.5rem;
+		color: $text;
+		animation: fadeInUp 0.8s ease-out 0.3s both;
+
+		span {
+			background: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+	}
+
+	h2 {
+		font-size: 1.3rem;
+		color: $text-light;
+		max-width: 700px;
+		margin: 0 auto 2rem;
+		animation: fadeInUp 0.8s ease-out 0.4s both;
+		font-weight: 400;
+	}
+
+	.text-container {
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 768px) {
+		padding: 8rem 2rem 4rem;
+
+		h1 {
+			font-size: 2.5rem;
+		}
+
+		h2 {
+			font-size: 1.1rem;
+		}
+	}
+}
+
+.hero-cta {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	margin-top: 2rem;
+	animation: fadeInUp 0.8s ease-out 0.6s both;
+
+	@media (max-width: 768px) {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+// Features Section
+.features {
+	padding: 6rem 2rem;
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+// Signup Section
+.signup-section {
+	padding: 6rem 2rem;
+	background: white;
+
+	.signup-container {
+		max-width: 640px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	h2 {
+		font-family: 'Plus Jakarta Sans', sans-serif;
+		font-size: 2.5rem;
+		font-weight: 800;
+		margin-bottom: 1rem;
+		color: $text;
+	}
+
+	p {
+		font-size: 1.1rem;
+		color: $text-light;
+		margin-bottom: 2.5rem;
+	}
+}
+
+.signup-form {
+	background: $background;
+	border: 1px solid $border;
+	border-radius: 20px;
+	padding: 2.5rem;
+
+	.form-group {
+		margin-bottom: 1.2rem;
+		text-align: left;
+
+		label {
+			display: block;
+			font-weight: 600;
+			font-size: 0.95rem;
+			color: $text;
+			margin-bottom: 0.4rem;
+		}
+
+		input {
+			width: 100%;
+			padding: 0.9rem 1.2rem;
+			border: 1.5px solid $border;
+			border-radius: 10px;
+			font-size: 1rem;
+			font-family: inherit;
+			color: $text;
+			background: white;
+			transition: border-color 0.3s ease, box-shadow 0.3s ease;
+			outline: none;
+
+			&:focus {
+				border-color: $primary-light;
+				box-shadow: 0 0 0 3px rgba(59, 143, 191, 0.1);
+			}
+
+			&::placeholder {
+				color: $text-light;
+			}
+		}
+	}
+
+	.submit-btn {
+		width: 100%;
+		padding: 1rem;
+		background: $primary;
+		color: white;
+		border: none;
+		border-radius: 10px;
+		font-size: 1.05rem;
+		font-weight: 600;
+		font-family: inherit;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		margin-top: 0.5rem;
+		box-shadow: 0 8px 24px $shadow;
+
+		&:hover {
+			background: $primary-dark;
+			transform: translateY(-2px);
+			box-shadow: 0 12px 32px $shadow;
+		}
+	}
+
+	.form-note {
+		margin-top: 1rem;
+		font-size: 0.85rem;
+		color: $text-light;
+		text-align: center;
+	}
+}
+
+// Content sections
+.content {
+	section {
+		padding: 80px 0;
+
+		&:nth-child(even) {
+			background: white;
+		}
+	}
+}
+
+// Interior page content sections
+.content {
+	.text {
+		h2 {
+			font-family: 'Plus Jakarta Sans', sans-serif;
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+			color: $text;
+		}
+
+		p {
+			color: $text-light;
+			font-size: 1.1rem;
+			line-height: 1.8;
+		}
+	}
+}
