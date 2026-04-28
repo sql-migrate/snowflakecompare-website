@@ -8,7 +8,7 @@ url: "https://www.snowflakecompare.com"
 description: "Snowflake schema comparison tool. Find every difference, generate deployment scripts, and track schema changes. Runs 100% locally."
 author:
   name: SnowflakeCompare
-  email: neil@postgrescompare.com
+  email: neil@snowflakecompare.com
 
 # -----
 # Build
